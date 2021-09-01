@@ -27,6 +27,11 @@ main {
   font-size: 45px;
 }
 
+.scroll {
+  height: 25vh;
+  overflow: scroll;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
