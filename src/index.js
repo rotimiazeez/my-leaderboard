@@ -1,51 +1,56 @@
 import './style.css';
 
-const score = document.querySelector('.score');
-const formDiv = document.querySelector('.form-div');
-
-const addScore = () => {
-  score.innerHTML = `<div class="header-score">
-                    <h2 class="recent-score">Recent Scores</h2>
-                    <div class="refresh-btn">
-                      <button class="refresh" type="submit">Refresh</button>
-                    </div>
-                  </div>
-                  <div class="score-results">
-                    <ul class="result-ul">
-                      <li class="result-li">Name: 100</li>
-                      <li class="result-li">Name: 20</li>
-                      <li class="result-li">Name: 50</li>
-                      <li class="result-li">Name: 78</li>
-                      <li class="result-li">Name: 125</li>
-                      <li class="result-li">Name: 77</li>
-                      <li class="result-li">Name: 42</li>
-                    </ul>
-                  </div>`;
+const API_KEY = 's5I1Iezs2fp5U1vv55v4';
+const URI = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${API_KEY}/scores`;
+const resultUl = document.querySelector('.result-ul');
+const displayScores = (list, res) => {
+  const { result } = res;
+  const scores = [];
+  for (let i = 0; i < result.length; i += 1) {
+    scores.push([result[i].user, result[i].score]);
+  }
+  list.innerHTML = '';
+  scores.forEach((score) => {
+    list.innerHTML += `<li>${score[0]}: ${score[1]}</li>`;
+  });
+  if (scores.length > 5) { list.classList.add('scroll'); }
 };
-addScore();
-
-const addForm = () => {
-  formDiv.innerHTML = `<form action="#" class="form">
-                        <h2 class="form-title">Add your score</h2>
-                        <div class="form-inputs">
-                          <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            placeholder="Your Name"
-                          />
-                        </div>
-                        <div class="form-inputs">
-                          <input
-                            type="text"
-                            name="score"
-                            id="score"
-                            placeholder="Your Score"
-                          />
-                        </div>
-                        <div class="submit-form">
-                          <button type="submit" class="submit-score">Submit</button>
-                        </div>
-                      </form>`;
+const fetchData = async () => {
+  await fetch(URI, {
+    method: 'GET',
+  })
+    .then((response) => response.json())
+    .then((result) => displayScores(resultUl, result));
 };
-addForm();
+
+const refresh = document.querySelector('.refresh');
+refresh.addEventListener('click', () => {
+  fetchData();
+});
+
+const postData = async (user, score) => {
+  await fetch(URI, {
+    method: 'POST',
+    body: JSON.stringify({ user, score }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => json);
+};
+
+const sendData = async () => {
+  const submitScore = document.querySelector('#form');
+  const nameInput = document.getElementById('name');
+  const scoreInput = document.getElementById('score');
+  submitScore.addEventListener('submit', (e) => {
+    e.preventDefault();
+    postData(nameInput.value, scoreInput.value);
+  });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  sendData();
+  fetchData();
+});
