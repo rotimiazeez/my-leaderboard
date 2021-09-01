@@ -16,7 +16,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Link](https://rotimiazeez.github.io/my-leaderboard/)
+[Live Link](coming soon...)
 
 ## Getting Started
 
