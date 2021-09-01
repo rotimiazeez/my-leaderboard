@@ -21,7 +21,7 @@ const addScore = () => {
                       <li class="result-li">Name: 42</li>
                     </ul>
                   </div>`;
-}
+};
 addScore();
 
 const addForm = () => {
@@ -47,5 +47,5 @@ const addForm = () => {
                           <button type="submit" class="submit-score">Submit</button>
                         </div>
                       </form>`;
-}
+};
 addForm();
