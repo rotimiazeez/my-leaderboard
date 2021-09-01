@@ -3,7 +3,8 @@ import './style.css';
 const score = document.querySelector('.score');
 const formDiv = document.querySelector('.form-div');
 
-score.innerHTML = `<div class="header-score">
+const addScore = () => {
+  score.innerHTML = `<div class="header-score">
                     <h2 class="recent-score">Recent Scores</h2>
                     <div class="refresh-btn">
                       <button class="refresh" type="submit">Refresh</button>
@@ -20,8 +21,11 @@ score.innerHTML = `<div class="header-score">
                       <li class="result-li">Name: 42</li>
                     </ul>
                   </div>`;
+}
+addScore();
 
-formDiv.innerHTML = `<form action="#" class="form">
+const addForm = () => {
+  formDiv.innerHTML = `<form action="#" class="form">
                         <h2 class="form-title">Add your score</h2>
                         <div class="form-inputs">
                           <input
@@ -43,3 +47,5 @@ formDiv.innerHTML = `<form action="#" class="form">
                           <button type="submit" class="submit-score">Submit</button>
                         </div>
                       </form>`;
+}
+addForm();
