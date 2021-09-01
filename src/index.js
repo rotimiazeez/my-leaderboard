@@ -47,6 +47,7 @@ const sendData = async () => {
   submitScore.addEventListener('submit', (e) => {
     e.preventDefault();
     postData(nameInput.value, scoreInput.value);
+    submitScore.reset();
   });
 };
 
