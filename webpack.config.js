@@ -12,13 +12,12 @@ module.exports = {
       },
     ],
   },
-  devtool: 'inline-source-map',
   devServer: {
     static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      template: './src/index.html',
     }),
   ],
   output: {

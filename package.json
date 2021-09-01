@@ -1,5 +1,5 @@
 {
-  "name": "webpack-setup-template",
+  "name": "my-leaderboard",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -11,20 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rotimiazeez/webpack-setup-template.git"
+    "url": "git+https://github.com/rotimiazeez/my-leaderboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rotimiazeez/webpack-setup-template/issues"
+    "url": "https://github.com/rotimiazeez/my-leaderboard/issues"
   },
-  "homepage": "https://github.com/rotimiazeez/webpack-setup-template#readme",
+  "homepage": "https://github.com/rotimiazeez/my-leaderboard#readme",
   "devDependencies": {
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "style-loader": "^3.2.1",
-    "webpack": "^5.50.0",
+    "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0"
   },
