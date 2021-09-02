@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Metal Mania", sans-serif;
+  background-color: #eee;
 }
 
 li {
@@ -23,8 +24,10 @@ main {
 }
 
 .main-title {
+  margin: 0;
   font-weight: 500;
   font-size: 45px;
+  color: #363c48;
 }
 
 .scroll {
@@ -43,16 +46,63 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #363c48;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.header-icon {
+  color: #581b12;
+  padding-left: 20px;
+  font-size: 35px;
 }
 
 .recent-score {
   font-weight: 500;
   font-size: 25px;
   margin-right: 20px;
+  color: #fff;
 }
 
 .refresh-btn {
   margin-left: 10px;
+}
+
+.score {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #f27a69;
+  width: 50%;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+}
+
+.user-img img {
+  width: 100%;
+}
+
+.users {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fa6855;
+  line-height: 30px;
+  color: #fff;
+}
+
+.users:nth-child(2n) {
+  background-color: #e0574f;
+}
+
+.score-name {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding-left: 40px;
 }
 
 .refresh {
@@ -61,21 +111,36 @@ main {
   justify-content: center;
   font-size: 20px;
   border: 2px solid rgb(54, 54, 54);
+  border-radius: 10px;
+  background-color: #f28766;
+  color: #fff;
   width: 120px;
   height: 40px;
   box-shadow: 1px 2px 4px black;
+  transition: all 0.5s;
 }
 
 .result-ul {
-  border: 2px solid black;
+  border: 3px solid #363c48;
+  border-radius: 10px;
 }
 
-.result-li {
-  padding: 5px 10px;
+.refresh:hover {
+  transition: all 0.5s;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #f28766;
 }
 
 .form-div {
-  margin-top: -150px;
+  background-color: #f08064;
+  width: 35%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.form-title {
+  color: #363c48;
 }
 
 .form input {
@@ -84,10 +149,16 @@ main {
   background-color: transparent;
   border: none;
   font-size: 18px;
+  height: 100%;
+  padding-left: 10px;
 }
 
 .form-inputs {
-  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  border: 2px solid #363c48;
+  border-radius: 10px;
+  height: 40px;
   margin-bottom: 30px;
 }
 
@@ -103,7 +174,18 @@ main {
   justify-content: center;
   font-size: 20px;
   border: 2px solid rgb(54, 54, 54);
+  border-radius: 10px;
+  background-color: #363c48;
+  color: #fff;
   width: 120px;
   height: 40px;
   box-shadow: 1px 2px 4px black;
+  transition: all 0.5s;
+}
+
+.submit-score:hover {
+  transition: all 0.5s;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #363c48;
 }
