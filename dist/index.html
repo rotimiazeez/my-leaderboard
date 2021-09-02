@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Leaderboard</title>
-<script defer src="main.bundle.js"></script></head>
+  <script defer src="main.bundle.js"></script>
+</head>
 
 <body>
   <main>
@@ -14,10 +15,32 @@
     <div class="wrapper">
       <div class="score">
 
+        <div class="header-score">
+          <h2 class="recent-score">Recent Scores</h2>
+          <div class="refresh-btn">
+            <button class="refresh" type="submit">Refresh</button>
+          </div>
+        </div>
+        <div class="score-results">
+          <ul class="result-ul">
+
+          </ul>
+        </div>
       </div>
 
       <div class="form-div">
-
+        <form action="#" class="form" id="form">
+          <h2 class="form-title">Add your score</h2>
+          <div class="form-inputs">
+            <input type="text" name="name" id="name" placeholder="Your Name" />
+          </div>
+          <div class="form-inputs">
+            <input type="text" name="score" id="score" placeholder="Your Score" />
+          </div>
+          <div class="submit-form">
+            <button type="submit" class="submit-score">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </main>
