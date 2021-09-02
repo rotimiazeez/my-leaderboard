@@ -112,7 +112,6 @@ main {
   font-size: 20px;
   border: 2px solid rgb(54, 54, 54);
   border-radius: 10px;
-  border: none;
   background-color: #f28766;
   color: #fff;
   width: 120px;
@@ -155,7 +154,6 @@ main {
 }
 
 .form-inputs {
-  border: 2px solid black;
   display: flex;
   align-items: center;
   border: 2px solid #363c48;
@@ -177,7 +175,6 @@ main {
   font-size: 20px;
   border: 2px solid rgb(54, 54, 54);
   border-radius: 10px;
-  border: none;
   background-color: #363c48;
   color: #fff;
   width: 120px;
