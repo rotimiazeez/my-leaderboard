@@ -16,7 +16,9 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Link](coming soon...)
+[Live Link](https://rotimiazeez.github.io/my-leaderboard/dist/)
+
+![screenshot (24)](https://user-images.githubusercontent.com/44624138/131835163-51d44d70-90f4-403e-9d9f-284f70f7c2db.png)
 
 ## Getting Started
 
@@ -59,6 +61,11 @@ You can also check against Webhint:
 
 ```bash
 npx hint --telemetry=off .
+```
+
+Automatically run app on your browser localhost:8080
+```bash
+npm start
 ```
 
 ## 👤 Author
